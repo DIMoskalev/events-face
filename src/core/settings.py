@@ -22,7 +22,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'src.events'
+    'src.events',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
