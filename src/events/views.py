@@ -1,4 +1,5 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
+
 from .models import PlaygroundEvent
 from .serializers import PlaygroundEventSerializer
 from django_filters.rest_framework import DjangoFilterBackend
@@ -9,6 +10,7 @@ from .paginators import PlaygroundEventsPaginator
 class PlaygroundEventListView(generics.ListAPIView):
     queryset = PlaygroundEvent.objects.filter(status='open').select_related('Playground')
     serializer_class = PlaygroundEventSerializer
+    permission_classes = [permissions.IsAuthenticated,]
     pagination_class = PlaygroundEventsPaginator
     filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_fields = ['title']
