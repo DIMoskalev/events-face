@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     'src.events',
     'src.users',
+    'src.sync',
 ]
 
 MIDDLEWARE = [
