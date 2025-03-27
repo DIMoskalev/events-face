@@ -12,6 +12,6 @@ class PlaygroundAdmin(admin.ModelAdmin):
 
 @admin.register(PlaygroundEvent)
 class PlaygroundEventAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'time', 'status', 'playground')
+    list_display = ('title', 'date', 'status', 'playground')
     list_filter = ('title', 'status', 'date', 'playground',)
     search_fields = ('title', 'date', 'playground',)
