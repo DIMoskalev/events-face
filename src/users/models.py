@@ -13,7 +13,7 @@ class User(AbstractUser):
         max_length=35,
         verbose_name="Телефон",
         help_text="Укажите номер телефона",
-        **NULLABLE
+        **NULLABLE,
     )
 
     def __str__(self):
