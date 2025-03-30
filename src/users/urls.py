@@ -8,7 +8,7 @@ from .views import UserViewSet
 app_name = UsersConfig.name
 
 router = SimpleRouter()
-router.register("api/auth/", UserViewSet, basename="users")
+router.register("api/auth", UserViewSet, basename="users")
 
 urlpatterns = [
     path(
